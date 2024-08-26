@@ -1,9 +1,8 @@
 import 'dotenv/config'
-import { createBot, MemoryDB } from '@builderbot/bot'
+import { createBot, MemoryDB, createProvider } from '@builderbot/bot'
 import AIClass from './services/ai';
 import flow from './flows';
 // import { provider } from './provider';
-import { createProvider }
 import { TelegramProvider } from '@builderbot-plugins/telegram' // importamos provider telegram
 
 
