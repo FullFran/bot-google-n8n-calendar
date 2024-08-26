@@ -1,4 +1,6 @@
 import { createProvider } from '@builderbot/bot';
+import { ProviderClass } from '@builderbot/bot';  // Asegúrate de que esto esté correctamente importado
+
 import { TelegramProvider } from '@builderbot-plugins/telegram'; // Importa el proveedor de Telegram
 
 // Configura el proveedor de Telegram
