@@ -20,7 +20,7 @@ const main = async () => {
     const { httpServer, handleCtx } = await createBot({
         database: new MemoryDB(),
         //provider,
-        provider: [whatsappProvider, telegramProvider], // Usa ambos proveedores para telegram
+        provider: telegramProvider, // Usa ambos proveedores para telegram
         flow,
     }, { extensions: { ai } })
 
