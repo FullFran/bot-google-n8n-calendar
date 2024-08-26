@@ -1,5 +1,5 @@
 import { createProvider } from '@builderbot/bot';
-import { TelegramProvider } from '@builderbot/provider-telegram'; // Importa el proveedor de Telegram
+import { TelegramProvider } from '@builderbot-plugins/telegram'; // Importa el proveedor de Telegram
 
 // Configura el proveedor de Telegram
 export const provider = createProvider(TelegramProvider, {
