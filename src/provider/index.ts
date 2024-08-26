@@ -1,12 +1,5 @@
 import { createProvider } from '@builderbot/bot';
-import { BaileysProvider } from '@builderbot/provider-baileys';
 import { TelegramProvider } from '@builderbot/provider-telegram'; // Importa el proveedor de Telegram
-
-// Configura el proveedor de WhatsApp
-const whatsappProvider = createProvider(BaileysProvider, {
-  groupsIgnore: true,
-  readStatus: false,
-});
 
 // Configura el proveedor de Telegram
 const telegramProvider = createProvider(TelegramProvider, {
@@ -14,4 +7,4 @@ const telegramProvider = createProvider(TelegramProvider, {
 });
 
 // Exporta ambos proveedores
-export { whatsappProvider, telegramProvider };
+export telegramProvider;
