@@ -3,7 +3,7 @@ import { createBot, MemoryDB } from '@builderbot/bot'
 import AIClass from './services/ai';
 import flow from './flows';
 // import { provider } from './provider';
-import { whatsappProvider, telegramProvider } from './provider'; // Importa ambos proveedores para telegram
+import { provider } from './provider'; // importa proveedor de telegram
 
 
 /** Puerto en el que se ejecutará el servidor */
@@ -19,8 +19,8 @@ const main = async () => {
     /** Objeto que contiene el servidor HTTP y el manejador de contexto */
     const { httpServer, handleCtx } = await createBot({
         database: new MemoryDB(),
-        //provider,
-        provider: telegramProvider, // Usa ambos proveedores para telegram
+        provider,
+        //provider: telegramProvider, // Usa ambos proveedores para telegram
         flow,
     }, { extensions: { ai } })
 
