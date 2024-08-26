@@ -3,7 +3,7 @@ import { createBot, MemoryDB } from '@builderbot/bot'
 import AIClass from './services/ai';
 import flow from './flows';
 // import { provider } from './provider';
-import { provider } from './provider'; // importa proveedor de telegram
+import { TelegramProvider } from '@builderbot-plugins/telegram' // importamos provider telegram
 
 
 /** Puerto en el que se ejecutará el servidor */
@@ -16,14 +16,24 @@ const ai = new AIClass(process.env.OPEN_API_KEY, 'gpt-4o-mini')
  * @async
  */
 const main = async () => {
+
+    /**
+    para hacer el provider de telegram
+    */
+    const adapterProvider = createProvider(TelegramProvider, {
+        token: process.env.TELEGRAM_BOT_TOKEN
+    })
+    
     /** Objeto que contiene el servidor HTTP y el manejador de contexto */
     const { httpServer, handleCtx } = await createBot({
         database: new MemoryDB(),
-        provider,
+        provider: adapterProvider,
         //provider: telegramProvider, // Usa ambos proveedores para telegram
         flow,
     }, { extensions: { ai } })
 
+    
+    
     /**
      * Ruta POST para enviar mensajes
      * @param {string} number - Número de teléfono del destinatario
