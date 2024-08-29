@@ -20,7 +20,7 @@ const main = async () => {
     /**
     para hacer el provider de telegram
     */
-    const adapterProvider = createProvider(TelegramProvider, {
+    const adapterProvider = createProvider(Provider, {
         token: process.env.TELEGRAM_BOT_TOKEN
     })
     
