@@ -40,7 +40,7 @@ const main = async () => {
      * @param {string} message - Mensaje a enviar
      * @param {string} [urlMedia] - URL del archivo multimedia (opcional)
      */
-    provider.server.post(
+    adapterProvider.server.post(
         '/v1/messages',
         handleCtx(async (bot, req, res) => {
             const { number, message, urlMedia } = req.body
@@ -54,7 +54,7 @@ const main = async () => {
      * @param {string} number - Número de teléfono del usuario
      * @param {string} name - Nombre del usuario
      */
-    provider.server.post(
+    adapterProvider.server.post(
         '/v1/register',
         handleCtx(async (bot, req, res) => {
             const { number, name } = req.body
@@ -68,7 +68,7 @@ const main = async () => {
      * @param {string} number - Número de teléfono a añadir o eliminar de la lista negra
      * @param {('add'|'remove')} intent - Acción a realizar (añadir o eliminar)
      */
-    provider.server.post(
+    adapterProvider.server.post(
         '/v1/blacklist',
         handleCtx(async (bot, req, res) => {
             const { number, intent } = req.body
