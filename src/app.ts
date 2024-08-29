@@ -3,11 +3,11 @@ import { createBot, MemoryDB, createProvider } from '@builderbot/bot'
 import AIClass from './services/ai';
 import flow from './flows';
 // import { provider } from './provider';
-import { TelegramProvider } from '@builderbot-plugins/telegram' // importamos provider telegram
+import { TelegramProvider as Provider} from '@builderbot-plugins/telegram' // importamos provider telegram
 
 
 /** Puerto en el que se ejecutará el servidor */
-const PORT = process.env.PORT ?? 3001
+const PORT = process.env.PORT ?? 3008
 /** Instancia de la clase AI */
 const ai = new AIClass(process.env.OPEN_API_KEY, 'gpt-4o-mini')
 
