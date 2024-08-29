@@ -1,5 +1,3 @@
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/ApzZZF?referralCode=jyd_0y)
-
 # AI-Powered Chatbot for Appointment Scheduling
 
 This project is an AI-powered chatbot designed for appointment scheduling, built using Node.js and the BuilderBot framework. It integrates with various services including OpenAI's GPT models, Google Calendar, and ChatPDF for enhanced functionality.
